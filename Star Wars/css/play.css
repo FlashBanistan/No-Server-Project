@@ -1,0 +1,61 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#images-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+.images{
+  width: 400px;
+  height: 300px;
+  padding-bottom: 10px;
+}
+
+@keyframes slidein{
+  from{
+    margin-left: 200%;
+    width: 100%;
+  }
+  to{
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+#button{
+  height: 50px;
+  width: 50px;
+}
+#button:hover{
+  transform: rotate(20deg);
+}
+#divvv{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.correct{
+  border: solid 5px green;
+}
+.incorrect{
+  border: solid 5px red;
+}
+.difficulty{
+  display: flex;
+}
+.level{
+  margin-right: 40px;
+}
+.outOfTime{
+  color: red;
+}
+h2{
+  color: white;
+}

@@ -1,0 +1,32 @@
+
+
+<div ng-controller="playCtrl" class="container">
+  <h1 id="header">{{counter}}</h1>
+  <h2> Your score is {{score}}/5</h2>
+  <div id="images-container">
+    <span ng-repeat="character in characters">
+      <div id="divvv">
+        <img class="images" src="{{character.image}}" alt="images of characters" />
+        <select
+           ng-model="selectedName"
+           ng-options="character for character in name"
+            ng-class="{
+                        correct: selectedName === character.name,
+                        incorrect: selectedName && selectedName !== character.name,
+                        neutral: !selectedName
+                      }"
+            ng-change="character.disabled = true; evaluateAnswer(selectedName === character.name)"
+            ng-disabled="character.disabled === true">
+
+        </select>
+      </div>
+    </span>
+  </div>
+  <div class="difficulty">
+    <easy-button class="level"></easy-button>
+    <medium-button class="level"></medium-button>
+    <hard-button class="level"></hard-button>
+</div>
+
+
+</div>

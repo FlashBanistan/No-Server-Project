@@ -1,0 +1,81 @@
+body {
+  background: #000 url(/images/other/stars.jpg);
+}
+.top-menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.menu-items{
+  font-size: 25px;
+  color: white;
+}
+.menu-items:hover{
+  color: blue;
+}
+.footer{
+  width: 100%;
+  border-top: solid black 1px;
+}
+
+/* Animation properties */
+.star {
+  animation: star 10s ease-out 1;
+}
+.wars {
+  animation: wars 10s ease-out 1;
+}
+/* Keyframes */
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(-0.75em);
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+@keyframes wars {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(0.5em);
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+/* Make the 3D work on the container */
+.starwars-demo {
+  perspective: 1000px;
+  transform-style: preserve3d;
+}
+/* General styles and layout */
+.starwars-demo {
+  height: 15em;
+  width: 34em;
+  margin: auto;
+}
+img {
+  width: 100%;
+}
+}
+.wars {
+  bottom: -0.5em;
+}
